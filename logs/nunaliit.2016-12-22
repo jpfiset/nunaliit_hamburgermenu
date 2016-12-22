@@ -1,0 +1,323 @@
+2016-12-22 12:12:33,231[INFO ]: Logging initialized @194ms
+2016-12-22 12:12:33,293[INFO ]: jetty-9.2.14.v20151106
+2016-12-22 12:12:33,338[INFO ]: Initializing Couch Configuration
+2016-12-22 12:12:33,340[INFO ]: RNG: NativePRNG
+2016-12-22 12:12:33,342[INFO ]: Document database configured: http://127.0.0.1:5984/testatlas/
+2016-12-22 12:12:33,343[INFO ]: User database configured: http://127.0.0.1:5984/_users/
+2016-12-22 12:12:33,434[INFO ]: User design document. Disk: 3 Db: 3 Update Required: true
+2016-12-22 12:12:33,506[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/multimedia.properties
+2016-12-22 12:12:33,589[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/sensitive.properties
+2016-12-22 12:12:33,589[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/mail.properties
+2016-12-22 12:12:33,681[INFO ]: sendUploadMailNotification: false
+2016-12-22 12:12:33,777[INFO ]: sendUploadMailNotification: false
+2016-12-22 12:12:33,778[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/upload.properties
+2016-12-22 12:12:33,778[INFO ]: Repository directory is /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 12:12:33,781[INFO ]: uploadOriginalImages: false
+2016-12-22 12:12:33,826[INFO ]: Start database change monitor thread
+2016-12-22 12:12:33,827[INFO ]: Submission database is not enabled
+2016-12-22 12:12:33,827[INFO ]: Start upload worker thread
+2016-12-22 12:12:33,828[INFO ]: Vetter daily notifications set to start at: 2016-12-23 00:00:00
+2016-12-22 12:12:33,829[INFO ]: Completed Couch Configuration
+2016-12-22 12:12:33,844[INFO ]: SubmissionServlet servlet initialization - start
+2016-12-22 12:12:33,844[INFO ]: SubmissionServlet servlet initialization - completed
+2016-12-22 12:12:33,844[INFO ]: UserServlet servlet initialization - start
+2016-12-22 12:12:33,846[INFO ]: Start date worker thread
+2016-12-22 12:12:33,894[INFO ]: UserServlet servlet initialization - completed
+2016-12-22 12:12:33,894[INFO ]: Start agreement worker thread
+2016-12-22 12:12:33,896[INFO ]: Upload Property upload.repository.dir = /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 12:12:33,896[INFO ]: OnUploadedListener: UploadListener
+2016-12-22 12:12:33,896[INFO ]: Started o.e.j.s.ServletContextHandler@2b4a2ec7{/,null,AVAILABLE}
+2016-12-22 12:12:33,900[INFO ]: Started ServerConnector@1a38c59b{HTTP/1.1}{0.0.0.0:8080}
+2016-12-22 12:12:33,900[INFO ]: Started @865ms
+2016-12-22 12:12:33,985[INFO ]: New user agreement detected: 1-01f0095897c27eb79dbad08f073605a2
+2016-12-22 12:12:33,986[INFO ]: User agreement is not enabled. Skip.
+2016-12-22 12:14:09,970[INFO ]: Logging initialized @215ms
+2016-12-22 12:14:10,044[INFO ]: jetty-9.2.14.v20151106
+2016-12-22 12:14:10,087[INFO ]: Initializing Couch Configuration
+2016-12-22 12:14:10,089[INFO ]: RNG: NativePRNG
+2016-12-22 12:14:10,090[INFO ]: Document database configured: http://127.0.0.1:5984/testatlas/
+2016-12-22 12:14:10,091[INFO ]: User database configured: http://127.0.0.1:5984/_users/
+2016-12-22 12:14:10,192[INFO ]: User design document. Disk: 3 Db: 3 Update Required: true
+2016-12-22 12:14:10,249[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/multimedia.properties
+2016-12-22 12:14:10,341[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/sensitive.properties
+2016-12-22 12:14:10,341[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/mail.properties
+2016-12-22 12:14:10,445[INFO ]: sendUploadMailNotification: false
+2016-12-22 12:14:10,542[INFO ]: sendUploadMailNotification: false
+2016-12-22 12:14:10,542[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/upload.properties
+2016-12-22 12:14:10,543[INFO ]: Repository directory is /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 12:14:10,546[INFO ]: uploadOriginalImages: false
+2016-12-22 12:14:10,594[INFO ]: Start database change monitor thread
+2016-12-22 12:14:10,596[INFO ]: Submission database is not enabled
+2016-12-22 12:14:10,596[INFO ]: Start upload worker thread
+2016-12-22 12:14:10,600[INFO ]: Vetter daily notifications set to start at: 2016-12-23 00:00:00
+2016-12-22 12:14:10,601[INFO ]: Completed Couch Configuration
+2016-12-22 12:14:10,610[INFO ]: Start date worker thread
+2016-12-22 12:14:10,611[INFO ]: SubmissionServlet servlet initialization - start
+2016-12-22 12:14:10,612[INFO ]: SubmissionServlet servlet initialization - completed
+2016-12-22 12:14:10,612[INFO ]: UserServlet servlet initialization - start
+2016-12-22 12:14:10,656[INFO ]: UserServlet servlet initialization - completed
+2016-12-22 12:14:10,663[INFO ]: Start agreement worker thread
+2016-12-22 12:14:10,664[INFO ]: Upload Property upload.repository.dir = /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 12:14:10,664[INFO ]: OnUploadedListener: UploadListener
+2016-12-22 12:14:10,665[INFO ]: Started o.e.j.s.ServletContextHandler@2b4a2ec7{/,null,AVAILABLE}
+2016-12-22 12:14:10,668[INFO ]: Started ServerConnector@1a38c59b{HTTP/1.1}{0.0.0.0:8080}
+2016-12-22 12:14:10,668[INFO ]: Started @915ms
+2016-12-22 12:14:10,746[INFO ]: New user agreement detected: 1-01f0095897c27eb79dbad08f073605a2
+2016-12-22 12:14:10,746[INFO ]: User agreement is not enabled. Skip.
+2016-12-22 12:19:05,871[INFO ]: Logging initialized @187ms
+2016-12-22 12:19:05,942[INFO ]: jetty-9.2.14.v20151106
+2016-12-22 12:19:05,984[INFO ]: Initializing Couch Configuration
+2016-12-22 12:19:05,985[INFO ]: RNG: NativePRNG
+2016-12-22 12:19:05,987[INFO ]: Document database configured: http://127.0.0.1:5984/testatlas/
+2016-12-22 12:19:05,987[INFO ]: User database configured: http://127.0.0.1:5984/_users/
+2016-12-22 12:19:06,080[INFO ]: User design document. Disk: 3 Db: 3 Update Required: true
+2016-12-22 12:19:06,136[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/multimedia.properties
+2016-12-22 12:19:06,229[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/sensitive.properties
+2016-12-22 12:19:06,230[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/mail.properties
+2016-12-22 12:19:06,321[INFO ]: sendUploadMailNotification: false
+2016-12-22 12:19:06,413[INFO ]: sendUploadMailNotification: false
+2016-12-22 12:19:06,414[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/upload.properties
+2016-12-22 12:19:06,414[INFO ]: Repository directory is /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 12:19:06,417[INFO ]: uploadOriginalImages: false
+2016-12-22 12:19:06,465[INFO ]: Start database change monitor thread
+2016-12-22 12:19:06,466[INFO ]: Submission database is not enabled
+2016-12-22 12:19:06,466[INFO ]: Start upload worker thread
+2016-12-22 12:19:06,467[INFO ]: Vetter daily notifications set to start at: 2016-12-23 00:00:00
+2016-12-22 12:19:06,468[INFO ]: Completed Couch Configuration
+2016-12-22 12:19:06,481[INFO ]: Start date worker thread
+2016-12-22 12:19:06,482[INFO ]: SubmissionServlet servlet initialization - start
+2016-12-22 12:19:06,483[INFO ]: SubmissionServlet servlet initialization - completed
+2016-12-22 12:19:06,483[INFO ]: UserServlet servlet initialization - start
+2016-12-22 12:19:06,530[INFO ]: UserServlet servlet initialization - completed
+2016-12-22 12:19:06,530[INFO ]: Start agreement worker thread
+2016-12-22 12:19:06,532[INFO ]: Upload Property upload.repository.dir = /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 12:19:06,532[INFO ]: OnUploadedListener: UploadListener
+2016-12-22 12:19:06,533[INFO ]: Started o.e.j.s.ServletContextHandler@2b4a2ec7{/,null,AVAILABLE}
+2016-12-22 12:19:06,536[INFO ]: Started ServerConnector@1a38c59b{HTTP/1.1}{0.0.0.0:8080}
+2016-12-22 12:19:06,536[INFO ]: Started @855ms
+2016-12-22 12:19:06,613[INFO ]: New user agreement detected: 1-01f0095897c27eb79dbad08f073605a2
+2016-12-22 12:19:06,614[INFO ]: User agreement is not enabled. Skip.
+2016-12-22 12:27:31,801[INFO ]: Logging initialized @263ms
+2016-12-22 12:27:31,879[INFO ]: jetty-9.2.14.v20151106
+2016-12-22 12:27:31,927[INFO ]: Initializing Couch Configuration
+2016-12-22 12:27:31,928[INFO ]: RNG: NativePRNG
+2016-12-22 12:27:31,930[INFO ]: Document database configured: http://127.0.0.1:5984/testatlas/
+2016-12-22 12:27:31,930[INFO ]: User database configured: http://127.0.0.1:5984/_users/
+2016-12-22 12:27:32,038[INFO ]: User design document. Disk: 3 Db: 3 Update Required: true
+2016-12-22 12:27:32,101[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/multimedia.properties
+2016-12-22 12:27:32,189[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/sensitive.properties
+2016-12-22 12:27:32,189[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/mail.properties
+2016-12-22 12:27:32,281[INFO ]: sendUploadMailNotification: false
+2016-12-22 12:27:32,365[INFO ]: sendUploadMailNotification: false
+2016-12-22 12:27:32,366[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/upload.properties
+2016-12-22 12:27:32,366[INFO ]: Repository directory is /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 12:27:32,370[INFO ]: uploadOriginalImages: false
+2016-12-22 12:27:32,417[INFO ]: Start database change monitor thread
+2016-12-22 12:27:32,419[INFO ]: Submission database is not enabled
+2016-12-22 12:27:32,419[INFO ]: Start upload worker thread
+2016-12-22 12:27:32,422[INFO ]: Vetter daily notifications set to start at: 2016-12-23 00:00:00
+2016-12-22 12:27:32,423[INFO ]: Completed Couch Configuration
+2016-12-22 12:27:32,433[INFO ]: Start date worker thread
+2016-12-22 12:27:32,434[INFO ]: SubmissionServlet servlet initialization - start
+2016-12-22 12:27:32,435[INFO ]: SubmissionServlet servlet initialization - completed
+2016-12-22 12:27:32,435[INFO ]: UserServlet servlet initialization - start
+2016-12-22 12:27:32,449[INFO ]: UserServlet servlet initialization - completed
+2016-12-22 12:27:32,450[INFO ]: Start agreement worker thread
+2016-12-22 12:27:32,451[INFO ]: Upload Property upload.repository.dir = /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 12:27:32,451[INFO ]: OnUploadedListener: UploadListener
+2016-12-22 12:27:32,452[INFO ]: Started o.e.j.s.ServletContextHandler@2b4a2ec7{/,null,AVAILABLE}
+2016-12-22 12:27:32,455[INFO ]: Started ServerConnector@1a38c59b{HTTP/1.1}{0.0.0.0:8080}
+2016-12-22 12:27:32,455[INFO ]: Started @919ms
+2016-12-22 12:27:32,545[INFO ]: New user agreement detected: 1-01f0095897c27eb79dbad08f073605a2
+2016-12-22 12:27:32,545[INFO ]: User agreement is not enabled. Skip.
+2016-12-22 13:52:14,316[INFO ]: Logging initialized @224ms
+2016-12-22 13:52:14,380[INFO ]: jetty-9.2.14.v20151106
+2016-12-22 13:52:14,429[INFO ]: Initializing Couch Configuration
+2016-12-22 13:52:14,431[INFO ]: RNG: NativePRNG
+2016-12-22 13:52:14,433[INFO ]: Document database configured: http://127.0.0.1:5984/testatlas/
+2016-12-22 13:52:14,434[INFO ]: User database configured: http://127.0.0.1:5984/_users/
+2016-12-22 13:52:14,547[INFO ]: User design document. Disk: 3 Db: 3 Update Required: true
+2016-12-22 13:52:14,607[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/multimedia.properties
+2016-12-22 13:52:14,698[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/sensitive.properties
+2016-12-22 13:52:14,698[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/mail.properties
+2016-12-22 13:52:14,793[INFO ]: sendUploadMailNotification: false
+2016-12-22 13:52:14,889[INFO ]: sendUploadMailNotification: false
+2016-12-22 13:52:14,890[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/upload.properties
+2016-12-22 13:52:14,890[INFO ]: Repository directory is /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 13:52:14,893[INFO ]: uploadOriginalImages: false
+2016-12-22 13:52:14,947[INFO ]: Submission database is not enabled
+2016-12-22 13:52:14,947[INFO ]: Start upload worker thread
+2016-12-22 13:52:14,947[INFO ]: Start database change monitor thread
+2016-12-22 13:52:14,948[INFO ]: Vetter daily notifications set to start at: 2016-12-23 00:00:00
+2016-12-22 13:52:14,956[INFO ]: Completed Couch Configuration
+2016-12-22 13:52:14,971[INFO ]: Start date worker thread
+2016-12-22 13:52:14,971[INFO ]: SubmissionServlet servlet initialization - start
+2016-12-22 13:52:14,973[INFO ]: SubmissionServlet servlet initialization - completed
+2016-12-22 13:52:14,973[INFO ]: UserServlet servlet initialization - start
+2016-12-22 13:52:14,984[INFO ]: UserServlet servlet initialization - completed
+2016-12-22 13:52:14,984[INFO ]: Start agreement worker thread
+2016-12-22 13:52:14,986[INFO ]: Upload Property upload.repository.dir = /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 13:52:14,986[INFO ]: OnUploadedListener: UploadListener
+2016-12-22 13:52:14,987[INFO ]: Started o.e.j.s.ServletContextHandler@2b4a2ec7{/,null,AVAILABLE}
+2016-12-22 13:52:14,991[INFO ]: Started ServerConnector@1a38c59b{HTTP/1.1}{0.0.0.0:8080}
+2016-12-22 13:52:14,991[INFO ]: Started @902ms
+2016-12-22 13:52:15,097[INFO ]: New user agreement detected: 1-01f0095897c27eb79dbad08f073605a2
+2016-12-22 13:52:15,097[INFO ]: User agreement is not enabled. Skip.
+2016-12-22 13:52:29,909[INFO ]: UploadServlet >welcome<
+2016-12-22 13:53:04,649[INFO ]: ProgressServlet getIds
+2016-12-22 13:53:04,710[INFO ]: UploadServlet >put<
+2016-12-22 13:53:04,726[INFO ]: Upload progressId:progress0
+2016-12-22 13:53:04,728[INFO ]: ProgressServlet getProgresses
+2016-12-22 13:53:04,729[INFO ]: Upload uploadId:8bffecb9424867061db3ebbf1307959f
+2016-12-22 13:53:04,730[INFO ]: Upload file is image name with spaces.gif
+2016-12-22 13:53:04,750[INFO ]: File written to /home/roikle/git/nunaliit_hamburgermenu/./media/upl5894799158634373728.gif
+2016-12-22 13:53:04,863[INFO ]: Upload worker processing: Document Work(state:waiting for upload id:8bffecb9424867061db3ebbf13078d11 uploadId:8bffecb9424867061db3ebbf1307959f uploadRequestDocId:8bffecb9424867061db3ebbf1307a025)
+2016-12-22 13:53:04,885[INFO ]: onLoad update: 8bffecb9424867061db3ebbf1307a025 -> [image name with spaces.gif]
+2016-12-22 13:53:05,065[INFO ]: Upload worker completed: Document Work(state:waiting for upload id:8bffecb9424867061db3ebbf13078d11 uploadId:8bffecb9424867061db3ebbf1307959f uploadRequestDocId:8bffecb9424867061db3ebbf1307a025)
+2016-12-22 13:53:05,117[INFO ]: Upload worker processing: Document Work(state:submitted id:8bffecb9424867061db3ebbf13078d11 att:image name with spaces.gif)
+2016-12-22 13:53:05,221[INFO ]: Upload worker completed: Document Work(state:submitted id:8bffecb9424867061db3ebbf13078d11 att:image name with spaces.gif)
+2016-12-22 13:53:05,289[INFO ]: Upload worker processing: Document Work(state:analyzed id:8bffecb9424867061db3ebbf13078d11 att:image name with spaces.gif)
+2016-12-22 13:53:05,442[INFO ]: ImageMagick 6.8 VERSION_6_6 (Version: ImageMagick 6.8.9-9 Q16 x86_64 2016-11-29 http://www.imagemagick.org)
+2016-12-22 13:53:05,546[INFO ]: ProgressServlet getProgresses
+2016-12-22 13:53:08,186[INFO ]: Upload worker completed: Document Work(state:analyzed id:8bffecb9424867061db3ebbf13078d11 att:image name with spaces.gif)
+2016-12-22 13:54:05,725[INFO ]: Upload worker processing: Document Work(state:approved id:8bffecb9424867061db3ebbf13078d11 att:image name with spaces_thumb.gif)
+2016-12-22 13:54:05,933[INFO ]: Upload worker completed: Document Work(state:approved id:8bffecb9424867061db3ebbf13078d11 att:image name with spaces_thumb.gif)
+2016-12-22 13:54:05,989[INFO ]: Upload worker processing: Document Work(state:approved id:8bffecb9424867061db3ebbf13078d11 att:image name with spaces.gif)
+2016-12-22 13:54:06,197[INFO ]: Upload worker completed: Document Work(state:approved id:8bffecb9424867061db3ebbf13078d11 att:image name with spaces.gif)
+2016-12-22 13:54:06,253[INFO ]: Upload worker processing: Document Work(state:orientation id:8bffecb9424867061db3ebbf13078d11 att:image name with spaces_thumb.gif)
+2016-12-22 13:54:06,657[INFO ]: Upload worker completed: Document Work(state:orientation id:8bffecb9424867061db3ebbf13078d11 att:image name with spaces_thumb.gif)
+2016-12-22 13:54:06,710[INFO ]: Upload worker processing: Document Work(state:thumbnail id:8bffecb9424867061db3ebbf13078d11 att:image name with spaces.gif)
+2016-12-22 13:54:06,801[INFO ]: Updated server thumbnail status
+2016-12-22 13:54:06,801[INFO ]: Upload worker completed: Document Work(state:thumbnail id:8bffecb9424867061db3ebbf13078d11 att:image name with spaces.gif)
+2016-12-22 14:08:21,548[INFO ]: Logging initialized @191ms
+2016-12-22 14:08:21,614[INFO ]: jetty-9.2.14.v20151106
+2016-12-22 14:08:21,658[INFO ]: Initializing Couch Configuration
+2016-12-22 14:08:21,659[INFO ]: RNG: NativePRNG
+2016-12-22 14:08:21,661[INFO ]: Document database configured: http://127.0.0.1:5984/testatlas/
+2016-12-22 14:08:21,662[INFO ]: User database configured: http://127.0.0.1:5984/_users/
+2016-12-22 14:08:21,752[INFO ]: User design document. Disk: 3 Db: 3 Update Required: true
+2016-12-22 14:08:21,818[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/multimedia.properties
+2016-12-22 14:08:21,913[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/sensitive.properties
+2016-12-22 14:08:21,913[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/mail.properties
+2016-12-22 14:08:22,005[INFO ]: sendUploadMailNotification: false
+2016-12-22 14:08:22,097[INFO ]: sendUploadMailNotification: false
+2016-12-22 14:08:22,098[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/upload.properties
+2016-12-22 14:08:22,098[INFO ]: Repository directory is /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 14:08:22,102[INFO ]: uploadOriginalImages: false
+2016-12-22 14:08:22,145[INFO ]: Start database change monitor thread
+2016-12-22 14:08:22,146[INFO ]: Submission database is not enabled
+2016-12-22 14:08:22,146[INFO ]: Start upload worker thread
+2016-12-22 14:08:22,148[INFO ]: Vetter daily notifications set to start at: 2016-12-23 00:00:00
+2016-12-22 14:08:22,151[INFO ]: Completed Couch Configuration
+2016-12-22 14:08:22,161[INFO ]: Start date worker thread
+2016-12-22 14:08:22,162[INFO ]: SubmissionServlet servlet initialization - start
+2016-12-22 14:08:22,162[INFO ]: SubmissionServlet servlet initialization - completed
+2016-12-22 14:08:22,162[INFO ]: UserServlet servlet initialization - start
+2016-12-22 14:08:22,206[INFO ]: UserServlet servlet initialization - completed
+2016-12-22 14:08:22,214[INFO ]: Start agreement worker thread
+2016-12-22 14:08:22,215[INFO ]: Upload Property upload.repository.dir = /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 14:08:22,215[INFO ]: OnUploadedListener: UploadListener
+2016-12-22 14:08:22,215[INFO ]: Started o.e.j.s.ServletContextHandler@2b4a2ec7{/,null,AVAILABLE}
+2016-12-22 14:08:22,220[INFO ]: Started ServerConnector@1a38c59b{HTTP/1.1}{0.0.0.0:8080}
+2016-12-22 14:08:22,220[INFO ]: Started @866ms
+2016-12-22 14:08:22,293[INFO ]: New user agreement detected: 1-01f0095897c27eb79dbad08f073605a2
+2016-12-22 14:08:22,294[INFO ]: User agreement is not enabled. Skip.
+2016-12-22 14:08:38,982[INFO ]: Logging initialized @181ms
+2016-12-22 14:08:39,119[INFO ]: jetty-9.2.14.v20151106
+2016-12-22 14:08:39,188[INFO ]: Initializing Couch Configuration
+2016-12-22 14:08:39,191[INFO ]: RNG: NativePRNG
+2016-12-22 14:08:39,197[INFO ]: Document database configured: http://127.0.0.1:5984/testatlas/
+2016-12-22 14:08:39,198[INFO ]: User database configured: http://127.0.0.1:5984/_users/
+2016-12-22 14:08:39,299[INFO ]: User design document. Disk: 3 Db: 3 Update Required: true
+2016-12-22 14:08:39,362[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/multimedia.properties
+2016-12-22 14:08:39,457[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/sensitive.properties
+2016-12-22 14:08:39,457[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/mail.properties
+2016-12-22 14:08:39,561[INFO ]: sendUploadMailNotification: false
+2016-12-22 14:08:39,661[INFO ]: sendUploadMailNotification: false
+2016-12-22 14:08:39,662[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/upload.properties
+2016-12-22 14:08:39,662[INFO ]: Repository directory is /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 14:08:39,665[INFO ]: uploadOriginalImages: false
+2016-12-22 14:08:39,713[INFO ]: Start database change monitor thread
+2016-12-22 14:08:39,715[INFO ]: Submission database is not enabled
+2016-12-22 14:08:39,715[INFO ]: Start upload worker thread
+2016-12-22 14:08:39,716[INFO ]: Vetter daily notifications set to start at: 2016-12-23 00:00:00
+2016-12-22 14:08:39,717[INFO ]: Completed Couch Configuration
+2016-12-22 14:08:39,729[INFO ]: Start date worker thread
+2016-12-22 14:08:39,730[INFO ]: SubmissionServlet servlet initialization - start
+2016-12-22 14:08:39,730[INFO ]: SubmissionServlet servlet initialization - completed
+2016-12-22 14:08:39,731[INFO ]: UserServlet servlet initialization - start
+2016-12-22 14:08:39,778[INFO ]: UserServlet servlet initialization - completed
+2016-12-22 14:08:39,778[INFO ]: Start agreement worker thread
+2016-12-22 14:08:39,780[INFO ]: Upload Property upload.repository.dir = /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 14:08:39,780[INFO ]: OnUploadedListener: UploadListener
+2016-12-22 14:08:39,780[INFO ]: Started o.e.j.s.ServletContextHandler@2b4a2ec7{/,null,AVAILABLE}
+2016-12-22 14:08:39,783[INFO ]: Started ServerConnector@1a38c59b{HTTP/1.1}{0.0.0.0:8080}
+2016-12-22 14:08:39,783[INFO ]: Started @986ms
+2016-12-22 14:08:39,874[INFO ]: New user agreement detected: 1-01f0095897c27eb79dbad08f073605a2
+2016-12-22 14:08:39,875[INFO ]: User agreement is not enabled. Skip.
+2016-12-22 14:18:10,908[INFO ]: Logging initialized @187ms
+2016-12-22 14:18:10,979[INFO ]: jetty-9.2.14.v20151106
+2016-12-22 14:18:11,029[INFO ]: Initializing Couch Configuration
+2016-12-22 14:18:11,031[INFO ]: RNG: NativePRNG
+2016-12-22 14:18:11,032[INFO ]: Document database configured: http://127.0.0.1:5984/testatlas/
+2016-12-22 14:18:11,033[INFO ]: User database configured: http://127.0.0.1:5984/_users/
+2016-12-22 14:18:11,121[INFO ]: User design document. Disk: 3 Db: 3 Update Required: true
+2016-12-22 14:18:11,180[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/multimedia.properties
+2016-12-22 14:18:11,273[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/sensitive.properties
+2016-12-22 14:18:11,273[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/mail.properties
+2016-12-22 14:18:11,369[INFO ]: sendUploadMailNotification: false
+2016-12-22 14:18:11,461[INFO ]: sendUploadMailNotification: false
+2016-12-22 14:18:11,462[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/upload.properties
+2016-12-22 14:18:11,462[INFO ]: Repository directory is /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 14:18:11,465[INFO ]: uploadOriginalImages: false
+2016-12-22 14:18:11,509[INFO ]: Start database change monitor thread
+2016-12-22 14:18:11,514[INFO ]: Submission database is not enabled
+2016-12-22 14:18:11,514[INFO ]: Start upload worker thread
+2016-12-22 14:18:11,515[INFO ]: Vetter daily notifications set to start at: 2016-12-23 00:00:00
+2016-12-22 14:18:11,516[INFO ]: Completed Couch Configuration
+2016-12-22 14:18:11,523[INFO ]: Start date worker thread
+2016-12-22 14:18:11,524[INFO ]: SubmissionServlet servlet initialization - start
+2016-12-22 14:18:11,524[INFO ]: SubmissionServlet servlet initialization - completed
+2016-12-22 14:18:11,524[INFO ]: UserServlet servlet initialization - start
+2016-12-22 14:18:11,537[INFO ]: UserServlet servlet initialization - completed
+2016-12-22 14:18:11,537[INFO ]: Start agreement worker thread
+2016-12-22 14:18:11,541[INFO ]: Upload Property upload.repository.dir = /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 14:18:11,541[INFO ]: OnUploadedListener: UploadListener
+2016-12-22 14:18:11,542[INFO ]: Started o.e.j.s.ServletContextHandler@2b4a2ec7{/,null,AVAILABLE}
+2016-12-22 14:18:11,548[INFO ]: Started ServerConnector@1a38c59b{HTTP/1.1}{0.0.0.0:8080}
+2016-12-22 14:18:11,548[INFO ]: Started @832ms
+2016-12-22 14:18:11,625[INFO ]: New user agreement detected: 1-01f0095897c27eb79dbad08f073605a2
+2016-12-22 14:18:11,626[INFO ]: User agreement is not enabled. Skip.
+2016-12-22 14:22:45,797[INFO ]: Logging initialized @248ms
+2016-12-22 14:22:45,867[INFO ]: jetty-9.2.14.v20151106
+2016-12-22 14:22:45,908[INFO ]: Initializing Couch Configuration
+2016-12-22 14:22:45,909[INFO ]: RNG: NativePRNG
+2016-12-22 14:22:45,911[INFO ]: Document database configured: http://127.0.0.1:5984/testatlas/
+2016-12-22 14:22:45,911[INFO ]: User database configured: http://127.0.0.1:5984/_users/
+2016-12-22 14:22:46,016[INFO ]: User design document. Disk: 3 Db: 3 Update Required: true
+2016-12-22 14:22:46,078[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/multimedia.properties
+2016-12-22 14:22:46,162[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/sensitive.properties
+2016-12-22 14:22:46,162[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/mail.properties
+2016-12-22 14:22:46,257[INFO ]: sendUploadMailNotification: false
+2016-12-22 14:22:46,353[INFO ]: sendUploadMailNotification: false
+2016-12-22 14:22:46,354[INFO ]: Reading properties from /home/roikle/git/nunaliit_hamburgermenu/./config/upload.properties
+2016-12-22 14:22:46,355[INFO ]: Repository directory is /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 14:22:46,358[INFO ]: uploadOriginalImages: false
+2016-12-22 14:22:46,406[INFO ]: Start database change monitor thread
+2016-12-22 14:22:46,407[INFO ]: Submission database is not enabled
+2016-12-22 14:22:46,407[INFO ]: Start upload worker thread
+2016-12-22 14:22:46,408[INFO ]: Vetter daily notifications set to start at: 2016-12-23 00:00:00
+2016-12-22 14:22:46,409[INFO ]: Completed Couch Configuration
+2016-12-22 14:22:46,418[INFO ]: Start date worker thread
+2016-12-22 14:22:46,418[INFO ]: SubmissionServlet servlet initialization - start
+2016-12-22 14:22:46,421[INFO ]: SubmissionServlet servlet initialization - completed
+2016-12-22 14:22:46,421[INFO ]: UserServlet servlet initialization - start
+2016-12-22 14:22:46,437[INFO ]: UserServlet servlet initialization - completed
+2016-12-22 14:22:46,437[INFO ]: Start agreement worker thread
+2016-12-22 14:22:46,439[INFO ]: Upload Property upload.repository.dir = /home/roikle/git/nunaliit_hamburgermenu/./media
+2016-12-22 14:22:46,439[INFO ]: OnUploadedListener: UploadListener
+2016-12-22 14:22:46,439[INFO ]: Started o.e.j.s.ServletContextHandler@2b4a2ec7{/,null,AVAILABLE}
+2016-12-22 14:22:46,449[INFO ]: Started ServerConnector@1a38c59b{HTTP/1.1}{0.0.0.0:8080}
+2016-12-22 14:22:46,449[INFO ]: Started @903ms
+2016-12-22 14:22:46,529[INFO ]: New user agreement detected: 1-01f0095897c27eb79dbad08f073605a2
+2016-12-22 14:22:46,530[INFO ]: User agreement is not enabled. Skip.
