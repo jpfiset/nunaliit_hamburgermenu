@@ -1,0 +1,24 @@
+[
+    {
+        "modelType":"couchDbDataSource"
+        ,"modelId": "documentModel"
+        ,"selectors": [
+            {
+                "type":"couchDbLayer"
+                ,"options": {
+                    "layerId": "public"
+                }
+                ,"name": {
+                    "nunaliit_type": "localized"
+                    ,"en": "Public"
+                }
+                ,"visibility": true
+            }
+        ]
+    }
+    ,{
+        "modelType":"timeTransform"
+        ,"modelId": "timeTransform"
+        ,"sourceModelId": "documentModel"
+    }
+]

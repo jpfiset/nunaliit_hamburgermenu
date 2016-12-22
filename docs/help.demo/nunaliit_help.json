@@ -1,0 +1,14 @@
+{
+	"nunaliit_type":"help"
+	,"title": {
+		"nunaliit_type":"localized"
+		,"en":"Help"
+		,"fr":"Aide"
+	}
+	,"type":"html"
+	,"content":{
+		"nunaliit_type":"localized"
+		,"en":"<b>This is the help section.</b>"
+		,"fr":"<b>Ceci est la section d'aide.</b>"
+	}
+}

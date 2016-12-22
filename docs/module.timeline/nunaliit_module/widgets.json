@@ -1,0 +1,10 @@
+[
+    {
+        "widgetType": "timeline"
+        ,"sourceModelId": "timeTransform"
+    }
+    ,{
+        "widgetType": "timeTransformToMapAndControlBridge"
+        ,"sourceModelId": "timeTransform"
+    }
+]
