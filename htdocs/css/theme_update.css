@@ -3,6 +3,26 @@
 	for this atlas.
 */
 
+/*---------------------------------------------------
+Document Display style update
+- n2_documentDisplay div is now displayed as a card
+---------------------------------------------------*/
+.n2_documentDisplay {
+	/* box-shadow equivalent for 2dp height */ 
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+	border-radius: 2px;
+	padding: 5px;
+}
+
+/* fix spacing issue with form buttons */
+.nunaliit_form_link {
+	margin-bottom: 3px;
+	border-radius: 2px; /* updated to Material Design rule */
+}
+.nunaliit_form_link.nunaliit_form_link_add_related_item {
+	max-height: 39px;
+}
+
 /*-------------------------------------
 Module Title and Footer border updates
 - Replace white border lines with dark lines
