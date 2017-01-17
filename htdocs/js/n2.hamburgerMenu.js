@@ -37,22 +37,24 @@ var
 //--------------------------------------------------------------------------
 var CreateHamburgerMenu = $n2.Class({
 
+	navigationService: null,
 	menuTitle: null,
 	moduleTitle: null,
-	navItems: null,
 	menuWidth: null,
 	atlas: null,
 	header: null,
-	hamburger_menu_content_mask: null,
+	hamburger_menu_content_mask_id: null,
 
 	initialize: function(opts_){
 		var opts = $n2.extend({
 			menuTitle: null
 			,menuWidth: null
 			,moduleTitle: null
-			,navItems: null
+			,navigationService: null
 		},opts_);
 
+		this.navigationService = opts.navigationService;
+		
 		// Set Menu Title
 		if( opts.menuTitle ){
 			this.menuTitle = opts.menuTitle;
@@ -75,17 +77,6 @@ var CreateHamburgerMenu = $n2.Class({
 			this.moduleTitle = 'Module Title';
 		};
 
-		// Generate Navigation Drawer Menu Items
-		if ( opts.navItems ) {
-			this.navItems = opts.navItems;
-		} else { 
-    		if ($('#navigation > ul').length){
-    			this.navItems = $('#navigation > ul');
-    		} else {
-    			$n2.log("no navigation items available for hamburger menu");
-    		};
-		};
-
 		if ($('.nunaliit_atlas').length){
 			this.atlas = $('.nunaliit_atlas');
 		} else {
@@ -100,6 +91,8 @@ var CreateHamburgerMenu = $n2.Class({
 
 		// Add Hamburger Menu
 		this._addMenu();
+		
+		$n2.log(this._classname,this);
 	},
 	_addHamburgerButton: function(){
 		var _this = this;
@@ -112,7 +105,8 @@ var CreateHamburgerMenu = $n2.Class({
 	    		.text('\u2261')
 	    		.click(function(){
 	    			$('#drawer_nav').css('transform','translateX(0px)');
-	    			_this.hamburger_menu_content_mask.css('visibility','visible');
+		    		var $hamburger_menu_content_mask = $('#'+_this.hamburger_menu_content_mask_id);
+		    		$hamburger_menu_content_mask.css('visibility','visible');
 	    		});
 		};
 		
@@ -122,12 +116,15 @@ var CreateHamburgerMenu = $n2.Class({
 
 		// Add an atlas content mask
 		// Used to hide content not related to drawer navigation menu
-		this.hamburger_menu_content_mask = $('<div>')
+		this.hamburger_menu_content_mask_id = $n2.getUniqueId();
+		$('<div>')
+			.attr('id',this.hamburger_menu_content_mask_id)
 			.appendTo(this.atlas)
 			.addClass('hamburger_menu_content_mask')
 			.click(function(){
 	    		$('#drawer_nav').css('transform','translateX(-' + _this.menuWidth + ')');
-	    		_this.hamburger_menu_content_mask.css('visibility','hidden');
+	    		var $hamburger_menu_content_mask = $('#'+_this.hamburger_menu_content_mask_id);
+	    		$hamburger_menu_content_mask.css('visibility','hidden');
 			});
 	},
 	_addMenu: function(){
@@ -166,11 +163,19 @@ var CreateHamburgerMenu = $n2.Class({
 	    	.text('\u2716')
 	    	.click(function(){
 	    		$('#drawer_nav').css('transform','translateX(-' + _this.menuWidth + ')');
-	    		_this.hamburger_menu_content_mask.css('visibility','hidden');
+	    		var $hamburger_menu_content_mask = $('#'+_this.hamburger_menu_content_mask_id);
+	    		$hamburger_menu_content_mask.css('visibility','hidden');
 	    	});
 
 		// Add a clone of navigation items to hamburger drawer menu
-		this.navItems.clone().appendTo(hamburger_menu);
+		if( this.navigationService ){
+			var $menuContent = $('<div>')
+				.addClass('drawer_menu_content')
+				.appendTo(hamburger_menu);
+			this.navigationService.printMenu({
+				elem: $menuContent
+			});
+		};
 	}
 });
 

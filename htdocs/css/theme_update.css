@@ -278,11 +278,11 @@ Hamburger Menu
 	margin-bottom: 0px;
 }
 
-.drawer_nav > ul > li {	
+.drawer_nav .drawer_menu_content > ul > li {	
 	font-weight: bold;
 }
 
-.drawer_nav > ul > li ul li {	
+.drawer_nav .drawer_menu_content > ul > li ul li {	
 	font-weight: normal;
 }
 

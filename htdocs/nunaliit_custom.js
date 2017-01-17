@@ -1,9 +1,25 @@
 ;(function($,$n2){
+	var DH = 'nunaliit_custom';
 
 if( typeof(window.nunaliit_custom) === 'undefined' ) window.nunaliit_custom = {};
 
 // Generate hamburger Menu
-function addHamburgerMenu (m) {
+function addHamburgerMenu (m, addr, dispatcher) {
+	
+	// Get configuration
+	var configMsg = {
+		type: 'configurationGetCurrentSettings'
+		,configuration: undefined
+	};
+	dispatcher.synchronousCall(DH,configMsg);
+	var config = configMsg.configuration;
+	
+	// From configuration, get navigation service
+	var navigationService = undefined;
+	if( config && config.directory ){
+		navigationService = config.directory.navigationService;
+	};
+	
 	var $replacementNav = $('<ul>')
 							.html('<li><a href="http://google.com">Google</a></li>'+
 								  '<li><a href="http://yahoo.com">Yahoo!</a></li>'+
@@ -22,6 +38,7 @@ function addHamburgerMenu (m) {
         	//menuWidth: "300px",
         	//moduleTitle: "module title",
         	//navItems: $replacementNav
+        	navigationService: navigationService
         });
 	};
 };
