@@ -92,7 +92,7 @@ var CreateHamburgerMenu = $n2.Class({
 			$n2.log(".nunaliit_atlas class not found, can't add hamburger menu");
 		};
 
-		if ($('.nunaliit_atlas').length){
+		if ($('.nunaliit_header').length){
 			this.header = $('.nunaliit_header');
 		} else {
 			$n2.log(".nunaliit_header class not found, can't add hamburger menu");
