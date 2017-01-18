@@ -35,7 +35,7 @@ var
  ;
 
 //--------------------------------------------------------------------------
-var CreateHamburgerMenu = $n2.Class({
+var CreateHamburgerMenu = $n2.Class('CreateHamburgerMenu',{
 
 	navigationService: null,
 	menuTitle: null,
@@ -43,6 +43,7 @@ var CreateHamburgerMenu = $n2.Class({
 	menuWidth: null,
 	atlas: null,
 	header: null,
+	drawer_id: null,
 	hamburger_menu_content_mask_id: null,
 
 	initialize: function(opts_){
@@ -88,6 +89,8 @@ var CreateHamburgerMenu = $n2.Class({
 		} else {
 			$n2.log(".nunaliit_header class not found, can't add hamburger menu");
 		};
+		
+		this.drawer_id = $n2.getUniqueId();
 
 		// Add Hamburger Menu
 		this._addMenu();
@@ -97,6 +100,8 @@ var CreateHamburgerMenu = $n2.Class({
 	_addHamburgerButton: function(){
 		var _this = this;
 
+		var drawerId = this.drawer_id;
+		
 		// Creates a hamburger button if it doesn't currently exist
 		if (!$('.hamburger_button').length) {
 	    	var hamburgerButton = $('<span>')
@@ -104,7 +109,7 @@ var CreateHamburgerMenu = $n2.Class({
 	    		.prependTo(this.header)
 	    		.text('\u2261')
 	    		.click(function(){
-	    			$('#drawer_nav').css('transform','translateX(0px)');
+	    			$('#'+drawerId).css('transform','translateX(0px)');
 		    		var $hamburger_menu_content_mask = $('#'+_this.hamburger_menu_content_mask_id);
 		    		$hamburger_menu_content_mask.css('visibility','visible');
 	    		});
@@ -113,6 +118,8 @@ var CreateHamburgerMenu = $n2.Class({
 	},
 	_addMask: function(){
 		var _this = this;
+		
+		var drawerId = this.drawer_id;
 
 		// Add an atlas content mask
 		// Used to hide content not related to drawer navigation menu
@@ -122,13 +129,15 @@ var CreateHamburgerMenu = $n2.Class({
 			.appendTo(this.atlas)
 			.addClass('hamburger_menu_content_mask')
 			.click(function(){
-	    		$('#drawer_nav').css('transform','translateX(-' + _this.menuWidth + ')');
+	    		$('#'+drawerId).css('transform','translateX(-' + _this.menuWidth + ')');
 	    		var $hamburger_menu_content_mask = $('#'+_this.hamburger_menu_content_mask_id);
 	    		$hamburger_menu_content_mask.css('visibility','hidden');
 			});
 	},
 	_addMenu: function(){
 		var _this = this;
+
+		var drawerId = this.drawer_id;
 
 		// Add Hamburger Menu
 		this._addHamburgerButton();
@@ -138,11 +147,11 @@ var CreateHamburgerMenu = $n2.Class({
 		// Create a Hamburger Menu if it doesn't currently exist
 		// This creates a template of a drawer nav menu with a title, module title and close button.
 		var hamburger_menu;
-		if (!$('#drawer_nav').length){
+		if (!$('#'+drawerId).length){
 	    	hamburger_menu = $('<div>')
 	    		.prependTo(this.atlas)
 	    		.addClass('drawer_nav')
-	    		.attr('id', 'drawer_nav') // ID is included for overwriting default css styling
+	    		.attr('id', drawerId) // ID is included for overwriting default css styling
 	    		.css('width', this.menuWidth)
 	    		.css('transform', 'translateX(-' + this.menuWidth + ')')
 	    		.html(
@@ -162,7 +171,7 @@ var CreateHamburgerMenu = $n2.Class({
 		$('.drawer_menu_header_title a.hamburger_menu_close_button')
 	    	.text('\u2716')
 	    	.click(function(){
-	    		$('#drawer_nav').css('transform','translateX(-' + _this.menuWidth + ')');
+	    		$('#'+drawerId).css('transform','translateX(-' + _this.menuWidth + ')');
 	    		var $hamburger_menu_content_mask = $('#'+_this.hamburger_menu_content_mask_id);
 	    		$hamburger_menu_content_mask.css('visibility','hidden');
 	    	});
