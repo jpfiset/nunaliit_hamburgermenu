@@ -14,31 +14,21 @@ function addHamburgerMenu (m, addr, dispatcher) {
 	dispatcher.synchronousCall(DH,configMsg);
 	var config = configMsg.configuration;
 	
-	// From configuration, get navigation service
+	// From configuration, get navigation and show services
 	var navigationService = undefined;
+	var showService = undefined;
 	if( config && config.directory ){
 		navigationService = config.directory.navigationService;
+		showService = config.directory.showService;
 	};
-	
-	var $replacementNav = $('<ul>')
-							.html('<li><a href="http://google.com">Google</a></li>'+
-								  '<li><a href="http://yahoo.com">Yahoo!</a></li>'+
-								  '<li><span>Planets</span>'+
-								  	'<ul>'+
-								  		'<li><a href="http://earth.com">Earth</a></li>'+
-								  		'<li><span>Mars</span></li>'+
-								  		'<li><span>Jupiter</span></li>'+
-								  		'<li><a href="http://saturn.com">Saturn</li>'+
-								  	'</ul>'+
-								  '</li>')
 	
     if ($n2.hamburgerMenu && $n2.hamburgerMenu.CreateHamburgerMenu) {
         new $n2.hamburgerMenu.CreateHamburgerMenu ({
-        	//menuTitle: "menu title",
-        	//menuWidth: "300px",
-        	//moduleTitle: "module title",
-        	//navItems: $replacementNav
-        	navigationService: navigationService
+        	dispatchService: dispatcher
+        	,navigationService: navigationService
+        	,showService: showService
+			,buttonContainerClass: 'nunaliit_header'
+			,buttonPrepend: true
         });
 	};
 };

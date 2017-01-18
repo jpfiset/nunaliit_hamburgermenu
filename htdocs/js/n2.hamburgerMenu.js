@@ -37,30 +37,43 @@ var
 //--------------------------------------------------------------------------
 var CreateHamburgerMenu = $n2.Class('CreateHamburgerMenu',{
 
+	dispatchService: null,
 	navigationService: null,
+	showService: null,
 	menuTitle: null,
-	moduleTitle: null,
+	moduleName: null,
 	menuWidth: null,
 	atlas: null,
 	header: null,
 	drawer_id: null,
 	hamburger_menu_content_mask_id: null,
+	buttonContainerClass: null,
+	buttonPrepend: null,
 
 	initialize: function(opts_){
 		var opts = $n2.extend({
 			menuTitle: null
 			,menuWidth: null
-			,moduleTitle: null
+			,moduleName: null
+			,dispatchService: null
 			,navigationService: null
+			,showService: null
+			,buttonContainerClass: null
+			,buttonPrepend: false
 		},opts_);
 
+		this.dispatchService = opts.dispatchService;
 		this.navigationService = opts.navigationService;
+		this.showService = opts.showService;
+		this.buttonContainerClass = opts.buttonContainerClass;
+		this.buttonPrepend = opts.buttonPrepend;
 		
 		// Set Menu Title
 		if( opts.menuTitle ){
 			this.menuTitle = opts.menuTitle;
+
 		} else {
-			this.menuTitle = 'Menu Title';
+			this.menuTitle = undefined;
 		};
 
 		// Set Menu Width
@@ -72,10 +85,10 @@ var CreateHamburgerMenu = $n2.Class('CreateHamburgerMenu',{
 		};
 
 		// Set Module Title
-		if( opts.moduleTitle ){
-			this.moduleTitle = opts.moduleTitle;
+		if( opts.moduleName ){
+			this.moduleName = opts.moduleName;
 		} else {
-			this.moduleTitle = 'Module Title';
+			this.moduleName = undefined;
 		};
 
 		if ($('.nunaliit_atlas').length){
@@ -84,38 +97,41 @@ var CreateHamburgerMenu = $n2.Class('CreateHamburgerMenu',{
 			$n2.log(".nunaliit_atlas class not found, can't add hamburger menu");
 		};
 
-		if ($('.nunaliit_header').length){
-			this.header = $('.nunaliit_header');
-		} else {
-			$n2.log(".nunaliit_header class not found, can't add hamburger menu");
-		};
-		
 		this.drawer_id = $n2.getUniqueId();
 
 		// Add Hamburger Menu
+		this._addHamburgerButton();
+		this._addMask();
 		this._addMenu();
 		
 		$n2.log(this._classname,this);
 	},
+
 	_addHamburgerButton: function(){
 		var _this = this;
 
 		var drawerId = this.drawer_id;
-		
-		// Creates a hamburger button if it doesn't currently exist
-		if (!$('.hamburger_button').length) {
-	    	var hamburgerButton = $('<span>')
+
+		$('.'+this.buttonContainerClass).each(function(){
+			var $container = $(this);
+
+			var $button = $('<span>')
 	    		.addClass('hamburger_button')
-	    		.prependTo(this.header)
 	    		.text('\u2261')
 	    		.click(function(){
 	    			$('#'+drawerId).css('transform','translateX(0px)');
 		    		var $hamburger_menu_content_mask = $('#'+_this.hamburger_menu_content_mask_id);
 		    		$hamburger_menu_content_mask.css('visibility','visible');
 	    		});
-		};
-		
+
+			if( _this.buttonPrepend ){
+				$button.prependTo($container);
+			} else {
+				$button.appendTo($container);
+			};
+		});
 	},
+
 	_addMask: function(){
 		var _this = this;
 		
@@ -139,11 +155,6 @@ var CreateHamburgerMenu = $n2.Class('CreateHamburgerMenu',{
 
 		var drawerId = this.drawer_id;
 
-		// Add Hamburger Menu
-		this._addHamburgerButton();
-		// Add Mask
-		this._addMask();
-
 		// Create a Hamburger Menu if it doesn't currently exist
 		// This creates a template of a drawer nav menu with a title, module title and close button.
 		var hamburger_menu;
@@ -151,39 +162,76 @@ var CreateHamburgerMenu = $n2.Class('CreateHamburgerMenu',{
 	    	hamburger_menu = $('<div>')
 	    		.prependTo(this.atlas)
 	    		.addClass('drawer_nav')
-	    		.attr('id', drawerId) // ID is included for overwriting default css styling
+	    		.attr('id', drawerId)
 	    		.css('width', this.menuWidth)
-	    		.css('transform', 'translateX(-' + this.menuWidth + ')')
-	    		.html(
-	    			'<div class="drawer_menu_header">'+
-	    				'<div class="drawer_menu_header_title">'+
-	    					'<a href="javascript:void(0)" class="hamburger_menu_close_button"></a>'+
-	    					'<span class="hamburger_menu_title">'+ _loc(this.menuTitle) +'</span>'+
-	    				'</div>'+
-	    				'<div class="drawer_menu_header_moduletitle nunaliit_module_title">'+
-	    					'<span class="n2s_insertModuleTitle hamburger_menu_moduletitle">'+ _loc(this.moduleTitle) +'</span>'+
-	    				'</div>'+
-	    			'</div>'
-	    		);
-		};
+	    		.css('transform', 'translateX(-' + this.menuWidth + ')');
+	    	
+	    	var $menuHeader = $('<div>')
+	    		.addClass('drawer_menu_header')
+	    		.appendTo(hamburger_menu);
+	    	
+	    	var $menuCloseButton = $('<a>')
+	    		.addClass('hamburger_menu_close_button')
+	    		.attr('href','javascript:void(0)')
+	    		.appendTo($menuHeader)
+		    	.text('\u2716')
+		    	.click(function(){
+		    		$('#'+drawerId).css('transform','translateX(-' + _this.menuWidth + ')');
+		    		var $hamburger_menu_content_mask = $('#'+_this.hamburger_menu_content_mask_id);
+		    		$hamburger_menu_content_mask.css('visibility','hidden');
+		    	});
+	    	
+	    	var $menuTitle = $('<div>')
+	    		.addClass('drawer_menu_header_title')
+	    		.appendTo($menuHeader);
+	    	
+	    	var $titleSpan = $('<span>')
+	    		.addClass('hamburger_menu_title')
+	    		.appendTo($menuTitle);
+	    	
+	    	if( this.menuTitle ){
+	    		$titleSpan.text( _loc(this.menuTitle) )
+	    	} else if( this.navigationService ) {
+	    		this.navigationService.printTitle({
+	    			elem: $titleSpan
+	    		});
+	    	};
 
-		// Set hamburger icon and close click functionality 
-		$('.drawer_menu_header_title a.hamburger_menu_close_button')
-	    	.text('\u2716')
-	    	.click(function(){
-	    		$('#'+drawerId).css('transform','translateX(-' + _this.menuWidth + ')');
-	    		var $hamburger_menu_content_mask = $('#'+_this.hamburger_menu_content_mask_id);
-	    		$hamburger_menu_content_mask.css('visibility','hidden');
-	    	});
+	    	var $menuModuleName = $('<div>')
+	    		.addClass('drawer_menu_header_modulename nunaliit_module_title')
+	    		.appendTo($menuHeader);
 
-		// Add a clone of navigation items to hamburger drawer menu
-		if( this.navigationService ){
-			var $menuContent = $('<div>')
-				.addClass('drawer_menu_content')
-				.appendTo(hamburger_menu);
-			this.navigationService.printMenu({
-				elem: $menuContent
-			});
+	    	var $moduleNameSpan = $('<span>')
+	    		.addClass('hamburger_menu_modulename')
+	    		.appendTo($menuModuleName);
+	    	
+	    	if( this.moduleName ){
+	    		$moduleNameSpan.text( _loc(this.moduleName) );
+	    	} else if( this.showService && this.dispatchService ){
+	    		var currentModuleMsg = {
+	    			type: 'moduleGetCurrent'
+	    		};
+	    		this.dispatchService.synchronousCall(DH,currentModuleMsg);
+	    		var moduleId = currentModuleMsg.moduleId;
+	    		if( moduleId ){
+		    		$moduleNameSpan.addClass('n2s_insertModuleName');
+		    		$moduleNameSpan.attr('nunaliit-document',moduleId);
+	    		};
+	    	};
+
+	    	// Insert navigation items to hamburger drawer menu
+			if( this.navigationService ){
+				var $menuContent = $('<div>')
+					.addClass('drawer_menu_content')
+					.appendTo(hamburger_menu);
+				this.navigationService.printMenu({
+					elem: $menuContent
+				});
+			};
+			
+			if( this.showService ){
+	    		this.showService.fixElementAndChildren(hamburger_menu, {});
+	    	};
 		};
 	}
 });

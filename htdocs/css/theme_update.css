@@ -230,14 +230,14 @@ Hamburger Menu
 	padding-top: 20px;
 }
 
-.drawer_nav .drawer_menu_header .hamburger_menu_moduletitle {
+.drawer_nav .drawer_menu_header .hamburger_menu_modulename {
 	color: white;
 	text-shadow: black 1px 1px 1px;
 	display: block;
 	padding-top: 5px;
 }
 
-.drawer_nav .drawer_menu_header_moduletitle {
+.drawer_nav .drawer_menu_header_modulename {
 	border-top: 1px solid #00695c;
 	border-bottom: 1px solid #111111;
 	background-color: #80cbc4;
@@ -251,12 +251,10 @@ Hamburger Menu
 
 .drawer_nav .hamburger_menu_close_button {
 	color: #FFFFFF;
-	top:5px;
-	right:5px;
 	text-shadow: black 1px 1px 1px;
-	position:absolute;
 	font-size:16px;
-	padding:0px;
+	padding:5px;
+	float: right;
 }
 
 .drawer_nav .hamburger_button:hover {
