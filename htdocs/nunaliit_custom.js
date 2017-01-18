@@ -22,8 +22,8 @@ function addHamburgerMenu (m, addr, dispatcher) {
 		showService = config.directory.showService;
 	};
 	
-    if ($n2.hamburgerMenu && $n2.hamburgerMenu.CreateHamburgerMenu) {
-        new $n2.hamburgerMenu.CreateHamburgerMenu ({
+    if ($n2.hamburgerMenu && $n2.hamburgerMenu.HamburgerMenu) {
+        new $n2.hamburgerMenu.HamburgerMenu ({
         	dispatchService: dispatcher
         	,navigationService: navigationService
         	,showService: showService

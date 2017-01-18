@@ -35,7 +35,7 @@ var
  ;
 
 //--------------------------------------------------------------------------
-var CreateHamburgerMenu = $n2.Class('CreateHamburgerMenu',{
+var HamburgerMenu = $n2.Class('HamburgerMenu',{
 
 	dispatchService: null,
 	navigationService: null,
@@ -44,9 +44,8 @@ var CreateHamburgerMenu = $n2.Class('CreateHamburgerMenu',{
 	moduleName: null,
 	menuWidth: null,
 	atlas: null,
-	header: null,
 	drawer_id: null,
-	hamburger_menu_content_mask_id: null,
+	mask_id: null,
 	buttonContainerClass: null,
 	buttonPrepend: null,
 
@@ -120,7 +119,7 @@ var CreateHamburgerMenu = $n2.Class('CreateHamburgerMenu',{
 	    		.text('\u2261')
 	    		.click(function(){
 	    			$('#'+drawerId).css('transform','translateX(0px)');
-		    		var $hamburger_menu_content_mask = $('#'+_this.hamburger_menu_content_mask_id);
+		    		var $hamburger_menu_content_mask = $('#'+_this.mask_id);
 		    		$hamburger_menu_content_mask.css('visibility','visible');
 	    		});
 
@@ -139,14 +138,14 @@ var CreateHamburgerMenu = $n2.Class('CreateHamburgerMenu',{
 
 		// Add an atlas content mask
 		// Used to hide content not related to drawer navigation menu
-		this.hamburger_menu_content_mask_id = $n2.getUniqueId();
+		this.mask_id = $n2.getUniqueId();
 		$('<div>')
-			.attr('id',this.hamburger_menu_content_mask_id)
+			.attr('id',this.mask_id)
 			.appendTo(this.atlas)
 			.addClass('hamburger_menu_content_mask')
 			.click(function(){
 	    		$('#'+drawerId).css('transform','translateX(-' + _this.menuWidth + ')');
-	    		var $hamburger_menu_content_mask = $('#'+_this.hamburger_menu_content_mask_id);
+	    		var $hamburger_menu_content_mask = $('#'+_this.mask_id);
 	    		$hamburger_menu_content_mask.css('visibility','hidden');
 			});
 	},
@@ -160,7 +159,7 @@ var CreateHamburgerMenu = $n2.Class('CreateHamburgerMenu',{
 		var hamburger_menu;
 		if (!$('#'+drawerId).length){
 	    	hamburger_menu = $('<div>')
-	    		.prependTo(this.atlas)
+	    		.appendTo(this.atlas)
 	    		.addClass('drawer_nav')
 	    		.attr('id', drawerId)
 	    		.css('width', this.menuWidth)
@@ -177,7 +176,7 @@ var CreateHamburgerMenu = $n2.Class('CreateHamburgerMenu',{
 		    	.text('\u2716')
 		    	.click(function(){
 		    		$('#'+drawerId).css('transform','translateX(-' + _this.menuWidth + ')');
-		    		var $hamburger_menu_content_mask = $('#'+_this.hamburger_menu_content_mask_id);
+		    		var $hamburger_menu_content_mask = $('#'+_this.mask_id);
 		    		$hamburger_menu_content_mask.css('visibility','hidden');
 		    	});
 	    	
@@ -238,7 +237,7 @@ var CreateHamburgerMenu = $n2.Class('CreateHamburgerMenu',{
 
 //--------------------------------------------------------------------------
 $n2.hamburgerMenu = {
-	CreateHamburgerMenu: CreateHamburgerMenu
+	HamburgerMenu: HamburgerMenu
 };
 
 })(jQuery,nunaliit2);
