@@ -43,7 +43,6 @@ var HamburgerMenu = $n2.Class('HamburgerMenu',{
 	menuTitle: null,
 	moduleName: null,
 	menuWidth: null,
-	atlas: null,
 	drawer_id: null,
 	mask_id: null,
 	buttonContainerClass: null,
@@ -57,6 +56,7 @@ var HamburgerMenu = $n2.Class('HamburgerMenu',{
 			,dispatchService: null
 			,navigationService: null
 			,showService: null
+			,drawerContainerClass: null
 			,buttonContainerClass: null
 			,buttonPrepend: false
 		},opts_);
@@ -64,6 +64,7 @@ var HamburgerMenu = $n2.Class('HamburgerMenu',{
 		this.dispatchService = opts.dispatchService;
 		this.navigationService = opts.navigationService;
 		this.showService = opts.showService;
+		this.drawerContainerClass = opts.drawerContainerClass;
 		this.buttonContainerClass = opts.buttonContainerClass;
 		this.buttonPrepend = opts.buttonPrepend;
 		
@@ -75,14 +76,6 @@ var HamburgerMenu = $n2.Class('HamburgerMenu',{
 			this.menuTitle = undefined;
 		};
 
-		// Set Menu Width
-		if( Number.isInteger(parseInt(opts.menuWidth)) ){
-			//menu Width is ensured that it's in pixel format
-			this.menuWidth = parseInt(opts.menuWidth)+'px';
-		} else {
-			this.menuWidth = '250px';
-		};
-
 		// Set Module Title
 		if( opts.moduleName ){
 			this.moduleName = opts.moduleName;
@@ -90,10 +83,12 @@ var HamburgerMenu = $n2.Class('HamburgerMenu',{
 			this.moduleName = undefined;
 		};
 
-		if ($('.nunaliit_atlas').length){
-			this.atlas = $('.nunaliit_atlas');
+		// Set Menu Width
+		if( Number.isInteger(parseInt(opts.menuWidth)) ){
+			//menu Width is ensured that it's in pixel format
+			this.menuWidth = parseInt(opts.menuWidth)+'px';
 		} else {
-			$n2.log(".nunaliit_atlas class not found, can't add hamburger menu");
+			this.menuWidth = '250px';
 		};
 
 		this.drawer_id = $n2.getUniqueId();
@@ -135,13 +130,18 @@ var HamburgerMenu = $n2.Class('HamburgerMenu',{
 		var _this = this;
 		
 		var drawerId = this.drawer_id;
+		
+		var $drawerContainer = $('body');
+		if( typeof this.drawerContainerClass === 'string' ){
+			$drawerContainer = $('.'+this.drawerContainerClass);
+		};
 
 		// Add an atlas content mask
 		// Used to hide content not related to drawer navigation menu
 		this.mask_id = $n2.getUniqueId();
 		$('<div>')
 			.attr('id',this.mask_id)
-			.appendTo(this.atlas)
+			.appendTo($drawerContainer)
 			.addClass('hamburger_menu_content_mask')
 			.click(function(){
 	    		$('#'+drawerId).css('transform','translateX(-' + _this.menuWidth + ')');
@@ -154,12 +154,17 @@ var HamburgerMenu = $n2.Class('HamburgerMenu',{
 
 		var drawerId = this.drawer_id;
 
+		var $drawerContainer = $('body');
+		if( typeof this.drawerContainerClass === 'string' ){
+			$drawerContainer = $('.'+this.drawerContainerClass);
+		};
+
 		// Create a Hamburger Menu if it doesn't currently exist
 		// This creates a template of a drawer nav menu with a title, module title and close button.
 		var hamburger_menu;
 		if (!$('#'+drawerId).length){
 	    	hamburger_menu = $('<div>')
-	    		.appendTo(this.atlas)
+	    		.appendTo($drawerContainer)
 	    		.addClass('drawer_nav')
 	    		.attr('id', drawerId)
 	    		.css('width', this.menuWidth)
